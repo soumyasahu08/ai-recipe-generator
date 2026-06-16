@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Recipe Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Recipe Generator</h1>
+    <form method="POST">
+      <textarea name="ingredients" placeholder="Enter ingredients here..."></textarea><br>
+      <button type="submit">Generate Recipe</button>
+    </form>
+    {% if recipe %}
+      <div class="result">
+        <h2>Generated Recipe:</h2>
+        <p>{{ recipe }}</p>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
